@@ -24,6 +24,6 @@ public class User {
     private double balance;
 
     @NotEmpty(message = "role cannot be empty")
-    @Pattern(regexp = "//d[customer],[librarian]//d", message = "role must be either customer or librarian")
+    @Pattern(regexp = "^(customer|librarian)$", message = "role must be either customer or librarian")
     private String role;
 }

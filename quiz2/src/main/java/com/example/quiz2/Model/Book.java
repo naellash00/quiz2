@@ -25,7 +25,7 @@ public class Book {
     private double price;
 
     @NotEmpty(message = "category cannot be empty")
-    //@Pattern(regexp = "[novel][academic]", message = "category must be either novel or academic")
+    @Pattern(regexp = "^(Novel|Academic)$", message = "category must be either Novel or Academic")
     private String category;
 
     @NotNull(message = "availability cannot be empty")
